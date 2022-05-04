@@ -9,17 +9,24 @@ const assertEqual = function (actual, expected) {
 
 
 const eqArrays = (array1, array2) => {
-  
-
   for (let x = 0; x < array1.length; x++) {
-          
-      if (array1[x] !== array2[x] || array1.length !== array2.length) {
-        return false;
-      }
-
+    if (array1[x] !== array2[x] || array1.length !== array2.length) {
+      return false;
     }
-    return true;
   }
-  
+  return true;
+};
 
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3, 4]), true);
+
+
+const assertArraysEqual = (arg1, arg2) => {
+  if (eqArrays(arg1, arg2) === false) {
+    assertEqual(eqArrays(arg1,arg2), true);
+    return
+  }
+  assertEqual(eqArrays(arg1,arg2), true);
+}
+
+
+
+assertArraysEqual([1, 2, 3], [1, 2, 3]);
