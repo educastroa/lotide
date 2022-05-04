@@ -1,3 +1,20 @@
+const letterPositions = function(string) {
+  const results = {};
+  for (let x = 0; x < string.length; x++)
+  if (results[string[x]]) {
+    results[string[x]].push(x);
+  } else if (string[x] === ' ') {
+
+  } else {
+    results[string[x]] = [x];
+  }
+  return results;
+};
+
+console.log(letterPositions('eduardo de castro e assis'));
+
+
+
 const assertEqual = function (actual, expected) {
   if (actual !== expected) {
     console.log(String.fromCodePoint(0x1f44e).repeat(3) + `Assertion Failed: ${actual} !== ${expected}`);
@@ -29,6 +46,4 @@ const assertArraysEqual = (arg1, arg2) => {
 
 
 
-assertArraysEqual([1, 2, 3], [1, 2, 3]);
-
-
+assertArraysEqual(letterPositions('eduardo de castro e assis').a, [3, 12, 20]);

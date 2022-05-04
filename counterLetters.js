@@ -17,7 +17,7 @@ const countLetters = function(string) {
     } else {
       answer[x] = 1;
     }
-  } return answer;
+  } return answer
 }
 
 console.log(countLetters('eduardo'));
