@@ -30,3 +30,6 @@ console.log(tail(words));
 console.log(tail(test));
 console.log(tail(test2));
 
+console.log(test2);
+
+

@@ -7,8 +7,20 @@ const assertEqual = function (actual, expected) {
   console.log(String.fromCodePoint(0x1f44c).repeat(3) + `Assertion Passed: ${actual} === ${expected}`);
 };
 
-// TEST CODE
-assertEqual("Lighthouse Labs", "Bootcamp");
-assertEqual(1, 1);
-assertEqual("Bootcamp", "Bootcamp");
-assertEqual(1, 15);
+
+const eqArrays = (array1, array2) => {
+  
+
+  for (let x = 0; x < array1.length; x++) {
+          
+      if (array1[x] !== array2[x] || array1.length !== array2.length) {
+        return false;
+      }
+
+    }
+    return true;
+  }
+  
+
+assertEqual(eqArrays([1, 2, 3], [1, 2, 3, 4]), true);
+
