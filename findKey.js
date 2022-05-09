@@ -15,7 +15,7 @@ const findKey = (object, callback) => {
         return x;        
       }
     }
-  }
+  };
     
 
 
