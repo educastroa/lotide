@@ -1,13 +1,3 @@
-const assertEqual = function (actual, expected) {
-  if (actual !== expected) {
-    console.log(String.fromCodePoint(0x1f44e).repeat(3) + `Assertion Failed: ${actual} !== ${expected}`);
-    return;
-  }
-
-  console.log(String.fromCodePoint(0x1f44c).repeat(3) + `Assertion Passed: ${actual} === ${expected}`);
-};
-
-
 const eqArrays = (array1, array2) => {
   
 
@@ -22,4 +12,4 @@ const eqArrays = (array1, array2) => {
   }
   
 
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3, 4]), true);
+module.exports = eqArrays;
