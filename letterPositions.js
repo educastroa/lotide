@@ -1,17 +1,17 @@
-const letterPositions = function(string) {
+const letterPositions = function (string) {
   const results = {};
   for (let x = 0; x < string.length; x++)
-  if (results[string[x]]) {
-    results[string[x]].push(x);
-  } else if (string[x] === ' ') {
+    if (results[string[x]]) {
+      results[string[x]].push(x);
+    } else if (string[x] === ' ') {
 
-  } else {
-    results[string[x]] = [x];
-  }
+    } else {
+      results[string[x]] = [x];
+    }
   return results;
 };
 
-console.log(letterPositions('eduardo de castro e assis'));
+
 
 
 
@@ -38,12 +38,10 @@ const eqArrays = (array1, array2) => {
 
 const assertArraysEqual = (arg1, arg2) => {
   if (eqArrays(arg1, arg2) === false) {
-    assertEqual(eqArrays(arg1,arg2), true);
-    return
+    assertEqual(eqArrays(arg1, arg2), true);
+    return;
   }
-  assertEqual(eqArrays(arg1,arg2), true);
-}
+  assertEqual(eqArrays(arg1, arg2), true);
+};
 
-
-
-assertArraysEqual(letterPositions('eduardo de castro e assis').a, [3, 12, 20]);
+module.exports = letterPositions;

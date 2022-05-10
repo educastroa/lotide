@@ -8,16 +8,16 @@ const assertEqual = function (actual, expected) {
 };
 
 
-const countLetters = function(string) {
+const countLetters = function (string) {
   let answer = {};
   for (const x of string) {
     if (answer[x]) {
-      answer[x] += 1
+      answer[x] += 1;
 
     } else {
       answer[x] = 1;
     }
-  } return answer
-}
+  } return answer;
+};
 
-console.log(countLetters('eduardo'));
+module.exports = countLetters;

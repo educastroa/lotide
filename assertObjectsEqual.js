@@ -15,13 +15,13 @@ const eqObjects = function (object1, object2) {
   if (keys1.length !== keys2.length) {
     return false;
 
-      } for (let item of keys1) {
-        
-        if (Array.isArray(object1[item]) && Array.isArray(object1[item])) {
-          return eqArrays(object1[item], object2[item]);
-        }
-        
-        if (object1[item] !== object2[item]) {
+  } for (let item of keys1) {
+
+    if (Array.isArray(object1[item]) && Array.isArray(object1[item])) {
+      return eqArrays(object1[item], object2[item]);
+    }
+
+    if (object1[item] !== object2[item]) {
 
       return false;
     }
@@ -33,10 +33,10 @@ const eqObjects = function (object1, object2) {
 
 const assertObjectEqual = (arg1, arg2) => {
   if (eqObjects(arg1, arg2) === false) {
-    assertEqual(eqObjects(arg1,arg2), true);
-    return
+    assertEqual(eqObjects(arg1, arg2), true);
+    return;
   }
-  assertEqual(eqObjects(arg1,arg2), true);
-}
+  assertEqual(eqObjects(arg1, arg2), true);
+};
 
-assertObjectEqual({ a: "1", b: "2" },{ a: "1", b: "2" });
+module.exports = assertObjectEqual;
